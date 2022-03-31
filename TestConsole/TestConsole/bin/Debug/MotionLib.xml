@@ -1,0 +1,1717 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MotionLib</name>
+    </assembly>
+    <members>
+        <member name="T:MotionLib.Idata">
+            <summary>
+            数据交互接口
+            </summary>
+        </member>
+        <member name="M:MotionLib.Idata.setData(System.String,MotionLib.EumParmasType,MotionLib.IParmas)">
+            <summary>
+            传递数据
+            </summary>
+            <param name="AxisParmaname">轴参数名称</param>
+            <param name="eumParmasType">数据类型</param>
+            <param name="idata">数据对象</param>
+        </member>
+        <member name="M:MotionLib.Idata.setData(System.String,System.String,MotionLib.EumParmasType,MotionLib.IParmas)">
+            <summary>
+            传递数据
+            </summary>
+            <param name="AxisName">轴名称</param>
+            <param name="AxisParmaname">轴参数名称</param>
+            <param name="eumParmasType">数据类型</param>
+            <param name="idata">数据对象</param>
+        </member>
+        <member name="M:MotionLib.Idata.setData``1(System.String,MotionLib.EumParmasType,System.Object[])">
+            <summary>
+            传递数据
+            </summary>
+            <typeparam name="T">数据对象</typeparam>     
+            <param name="AxisParmaname">轴参数名称</param>
+            <param name="eumParmasTypea">数据类型</param>
+            <param name="objs">构造函数的参数</param>
+        </member>
+        <member name="M:MotionLib.Idata.setData``1(System.String,System.String,MotionLib.EumParmasType,System.Object[])">
+            <summary>
+            传递数据
+            </summary>
+            <typeparam name="T">数据对象</typeparam>
+            <param name="AxisName">轴名称</param>
+            <param name="AxisParmaname">轴参数名称</param>
+            <param name="eumParmasTypea">数据类型</param>
+            <param name="objs">构造函数的参数</param>
+        </member>
+        <member name="M:MotionLib.Idata.getData``1(System.String)">
+            <summary>
+            获取数据
+            </summary>
+        </member>
+        <member name="T:MotionLib.IEcatIO">
+            <summary>
+            Ecat总线型IO
+            </summary>
+        </member>
+        <member name="M:MotionLib.IEcatIO.OR_GetSlaveNum(System.Int16@,System.Object[])">
+            <summary>
+            获取从站个数
+            </summary>
+            <param name="pValue">返回从站个数</param>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IEcatIO.OR_GetServoNumber(System.Int16@,System.Object[])">
+            <summary>
+            获取从站伺服个数 
+            </summary>
+            <param name="pValue">返回从站伺服个数</param>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IEcatIO.OR_GetDiNumber(System.Int16@,System.Object[])">
+            <summary>
+            获取从站数字输入个数
+            </summary>
+            <param name="pValue">返回从站数字输入个数</param>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IEcatIO.OR_GetDoNumber(System.Int16@,System.Object[])">
+            <summary>
+            获取从站数字输出个数
+            </summary>
+            <param name="pValue">返回从站数字输出个数</param>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IEcatIO.OR_SetEcatDoBit(System.Object[])">
+            <summary>
+            按位设置数字 IO 输出状态。
+            </summary>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IEcatIO.OR_GetEcatDo(System.UInt32@,System.Object[])">
+            <summary>
+            读取数字 IO 输出状态
+            </summary>
+            <param name="pValue">数字IO输出状态,按位表示指定输入状态</param>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IEcatIO.OR_GetEcatDi(System.UInt32@,System.Object[])">
+            <summary>
+            读取数字IO输入状态
+            </summary>
+            <param name="pValue">数字IO输入状态,按位表示指定输入状态</param>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="T:MotionLib.IParmas">
+            <summary>
+            控制参数接口
+            </summary>
+        </member>
+        <member name="E:MotionLib.IParmas.axisPropertyChangedHandler">
+            <summary>
+            轴通知句柄
+            </summary>
+        </member>
+        <member name="E:MotionLib.IParmas.cardPropertyChangedHandler">
+            <summary>
+            卡通知句柄
+            </summary>
+        </member>
+        <member name="T:MotionLib.PropertyChangedDel">
+            <summary>
+            属性通知
+            </summary>
+            <param name="name">对象名称</param>
+            <param name="obj">对象参数</param>
+        </member>
+        <member name="T:MotionLib.FileOperate">
+            <summary>
+            文件存储
+            </summary>
+        </member>
+        <member name="M:MotionLib.FileOperate.InportParameterFile``1">
+            <summary>
+            导入参数文件
+            </summary>
+            <typeparam name="T">参数类型</typeparam>
+            <returns>参数对象</returns>
+        </member>
+        <member name="M:MotionLib.FileOperate.ExportParameterFile(System.Object)">
+            <summary>
+            导出参数文件
+            </summary>
+            <param name="SerializeObj"> 被导出对象</param>
+        </member>
+        <member name="M:MotionLib.FileOperate.LoadParameterFile``1(System.String)">
+            <summary>
+             加载参数文件
+            </summary>
+            <typeparam name="T">参数类型</typeparam>
+            <param name="fileName">文件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.FileOperate.SaveParameterFile(System.Object,System.String)">
+            <summary>
+            保存参数文件
+            </summary>
+            <param name="SerializeObj">被保存对象</param>
+            <param name="fileName">文件名称</param>
+        </member>
+        <member name="T:MotionLib.IFileOperate">
+            <summary>
+            文件接口
+            </summary>
+        </member>
+        <member name="M:MotionLib.IFileOperate.LoadParameterFile``1(System.String)">
+            <summary>
+             加载参数文件
+            </summary>
+            <typeparam name="T">参数类型</typeparam>
+            <param name="fileName">文件名称</param>
+            <returns>文件对象</returns>
+        </member>
+        <member name="M:MotionLib.IFileOperate.SaveParameterFile(System.Object,System.String)">
+            <summary>
+            保存参数文件
+            </summary>
+            <param name="SerializeObj">被保存对象</param>
+            <param name="fileName">文件名称</param>
+        </member>
+        <member name="T:MotionLib.ImotionController">
+            <summary>
+            运控控制接口 
+            </summary>
+        </member>
+        <member name="M:MotionLib.ImotionController.initMotionCard``1(``0)">
+            <summary>
+            板卡初始化
+            </summary>
+            <typeparam name="T">T隶属于MotionData.InitCardParams</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>方法执行返回值</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.releaseMotionCard``1(``0)">
+            <summary>
+            关闭控制卡，释放资源
+            </summary>
+            <typeparam name="T">T隶属于MotionData.InitCardParams</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>运行状态</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.executeCommandOfHome``1(``0)">
+            <summary>
+            执行回原命令
+            </summary>
+            <typeparam name="T">T隶属于MotionData.RunHomeParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>方法执行返回值</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.executeCommandOfTrap_Abs``1(``0)">
+            <summary>
+            点位运动(绝对)
+            </summary>
+            <typeparam name="T">数据类型隶属于TrapParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.executeCommandOfTrap_Rel``1(``0)">
+            <summary>
+            点位运动(相对)
+            </summary>
+            <typeparam name="T">数据类型隶属于TrapParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.executeCommandOfJog``1(``0)">
+            <summary>
+            JOG运动
+            </summary>
+            <typeparam name="T">数据类型隶属于JogParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.executeCommandOfGear``1(``0)">
+            <summary>
+            Gear运动（电子齿轮运动）
+            </summary>
+            <typeparam name="T">数据类型隶属于GearParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.executeCommandOfFollow``1(``0)">
+            <summary>
+            Follow运动（从轴跟随主轴规划）
+            </summary>
+            <typeparam name="T">数据类型隶属于FollowParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.executeCommandOfLinearXYInterpolation``1(``0)">
+            <summary>
+            XY直线插补运动
+            </summary>
+            <typeparam name="T">数据类型隶属于Crd_LnXYParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.executeCommandOfLinearXYZInterpolation``1(``0)">
+            <summary>
+            XYZ直线插补运动
+            </summary>
+            <typeparam name="T">数据类型隶属于Crd_LnXYZParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.executeCommandOfLinearXYZAInterpolation``1(``0)">
+            <summary>
+            XYZA直线插补运动
+            </summary>
+            <typeparam name="T">数据类型隶属于Crd_LnXYZAParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.executeCommandOfArcXYRInterpolation``1(``0)">
+            <summary>
+            XYR圆弧插补运动
+            </summary>
+            <typeparam name="T">数据类型隶属于Crd_ArcXYRParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.ImotionController.executeCommandOfArcXYCInterpolation``1(``0)">
+            <summary>
+            XYC圆弧插补运动
+            </summary>
+            <typeparam name="T">数据类型隶属于Crd_ArcXYCParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="T:MotionLib.IPluseIO">
+            <summary>
+            脉冲型拓展IO
+            </summary>
+        </member>
+        <member name="M:MotionLib.IPluseIO.OR_SetExtendCardCount(System.Object[])">
+            <summary>
+            设置扩展IO数量
+            </summary>
+            <param name="objs">参数集</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IPluseIO.OR_GetDi(System.Int64@,System.Object[])">
+            <summary>
+             读取数字I/O输入的电平状态  
+            </summary>
+            <param name="pValue">返回I/O输入信号值</param>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IPluseIO.OR_SetDo(System.Object[])">
+            <summary>
+            设置数字I/O输出的电平状态 
+            </summary>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IPluseIO.OR_SetDoBit(System.Object[])">
+            <summary>
+            按位设置数字I/O的输出的电平状态 
+            </summary>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IPluseIO.OR_GetDo(System.Int64@,System.Object[])">
+            <summary>
+            读取数字I/O的输出的电平状态
+            </summary>
+            <param name="pValue">返回I/O输入信号值</param>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IPluseIO.OR_GetExtendDi(System.Int64@,System.Object[])">
+            <summary>
+            读取扩展 I/O块的输入电平状态 
+            </summary>
+            <param name="pValue">返回 I/O输入信号</param>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IPluseIO.OR_GetExtendDiBit(System.Int16@,System.Object[])">
+            <summary>
+            按照读取扩展 I/O位的输入电平状态 
+            </summary>
+            <param name="pValue">返回 I/O输入信号</param>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IPluseIO.OR_SetExtendDo(System.Object[])">
+            <summary>
+            设置扩展I/O块的输出电平状态 
+            </summary>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IPluseIO.OR_SetExtendDoBit(System.Object[])">
+            <summary>
+            按位设置扩展I/O位的输出电平状态
+            </summary>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.IPluseIO.OR_GetExtendDo(System.Int64@,System.Object[])">
+            <summary>
+            读取扩展I/O块的输出电平状态
+            </summary>
+            <param name="pValue">返回I/O输出信号值</param>
+            <param name="objs">参数对象</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="T:MotionLib.MotionControlBase">
+            <summary>
+            运动控制基类
+            一个对象对应一张控制卡，对应N个轴
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.#ctor">
+            <summary>
+            运动控制基类
+            </summary>
+        </member>
+        <member name="F:MotionLib.MotionControlBase.motionDataDic">
+            <summary>
+            运控控制参数集合对象,统一对外接口对象,卡与参数对象对应
+            </summary>
+        </member>
+        <member name="F:MotionLib.MotionControlBase.m_bInited">
+            <summary>
+            卡初始化成功标志
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionControlBase.ProductSN">
+            <summary>
+            产品型号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionControlBase.eumCurrentWorkingstatus">
+            <summary>
+            当前工作状态
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.Dispose">
+            <summary>
+            支援释放
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.refreshMotionDataDic">
+            <summary>
+            数据刷新
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.getDescriptionInfo``1(``0)">
+            <summary>
+            获取指定枚举值的描述文本，
+            T：枚举类型，
+            obj：枚举值,
+            returns：描述信息
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="obj">枚举值</param>
+            <returns>描述信息</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.getProductManufacturer">
+            <summary>
+            获取产品制作商
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.ExecuteCMD(System.Func{System.Int16,System.Int16,System.Int16,System.Int16},System.Int16,System.Int16)">
+            <summary>
+            指令集命令执行
+            </summary>
+            <param name="FuncCall">调用方法</param>
+            <param name="channel">通道</param>
+            <param name="cardNum">卡号</param>
+            <returns>执行状态返回值</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.ExecuteCMD(System.Func{System.Int16,System.Int16,System.Int16},System.Int16,System.Int16)">
+            <summary>
+            指令集命令执行
+            </summary>
+            <param name="FuncCall">调用方法</param>
+            <param name="channel">通道</param>
+            <param name="cardNum">卡号</param>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.ExecuteCMD(System.Int16,System.Int16,System.Func{System.Int16,System.Int16,System.Int16})">
+            <summary>
+            指令集命令执行
+            </summary>
+            <param name="FuncCall">调用方法</param>
+            <param name="axisNum">通道</param>
+            <param name="cardNum">卡号</param>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.ExecuteCMD(System.Func{System.Int16,System.Int16},System.Int16)">
+            <summary>
+            指令集命令执行
+            </summary>
+            <param name="FuncCall">调用方法</param>
+            <param name="cardNum">卡号</param>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.initMotionCard``1(``0)">
+            <summary>
+            初始化运动控制卡
+            </summary>
+            <typeparam name="T">T隶属于MotionData.InitCardParams</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>方法执行返回值</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.releaseMotionCard``1(``0)">
+            <summary>
+            关闭控制卡，释放资源
+            </summary>
+            <typeparam name="T">T隶属于MotionData.InitCardParams</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>方法执行返回值</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.executeCommandOfHome``1(``0)">
+            <summary>
+            执行回原命令
+            </summary>
+            <typeparam name="T">T隶属于MotionData.RunHomeParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>方法执行返回值</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.executeCommandOfTrap_Abs``1(``0)">
+            <summary>
+            点位运动(绝对)
+            </summary>
+            <typeparam name="T">数据类型隶属于TrapParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.executeCommandOfTrap_Rel``1(``0)">
+            <summary>
+            点位运动(相对)
+            </summary>
+            <typeparam name="T">数据类型隶属于TrapParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.executeCommandOfJog``1(``0)">
+            <summary>
+            JOG运动
+            </summary>
+            <typeparam name="T">数据类型隶属于JogParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.executeCommandOfGear``1(``0)">
+            <summary>
+            Gear运动（电子齿轮运动）
+            </summary>
+            <typeparam name="T">数据类型隶属于GearParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.executeCommandOfFollow``1(``0)">
+            <summary>
+            Follow运动（从轴跟随主轴规划）
+            </summary>
+            <typeparam name="T">数据类型隶属于GearParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.executeCommandOfLinearXYInterpolation``1(``0)">
+            <summary>
+            XY直线插补运动
+            </summary>
+            <typeparam name="T">数据类型隶属于Crd_LnXYParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.executeCommandOfLinearXYZInterpolation``1(``0)">
+            <summary>
+            XYZ直线插补运动
+            </summary>
+            <typeparam name="T">数据类型隶属于Crd_LnXYZParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.executeCommandOfLinearXYZAInterpolation``1(``0)">
+            <summary>
+            XYZA直线插补运动
+            </summary>
+            <typeparam name="T">数据类型隶属于Crd_LnXYZAParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.executeCommandOfArcXYRInterpolation``1(``0)">
+            <summary>
+            XYR圆弧插补运动
+            </summary>
+            <typeparam name="T">数据类型隶属于Crd_ArcXYRParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.executeCommandOfArcXYCInterpolation``1(``0)">
+            <summary>
+            XYR圆弧插补运动
+            </summary>
+            <typeparam name="T">数据类型隶属于Crd_ArcXYCParmas</typeparam>
+            <param name="obj">参数对象</param>
+            <returns>命令执行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.setData(System.String,MotionLib.EumParmasType,MotionLib.IParmas)">
+            <summary>
+            传递数据
+            </summary>
+            <param name="name">轴参数名称</param>
+            <param name="eumParmasType">数据类型</param>
+            <param name="ipropertyChange">数据对象</param>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.setData(System.String,System.String,MotionLib.EumParmasType,MotionLib.IParmas)">
+            <summary>
+            传递数据
+            </summary>
+             <param name="AxisName">轴名称</param>
+            <param name="name">轴参数名称</param>
+            <param name="eumParmasType">数据类型</param>
+            <param name="ipropertyChange">数据对象</param>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.setData``1(System.String,MotionLib.EumParmasType,System.Object[])">
+            <summary>
+            传递数据
+            </summary>
+            <typeparam name="T">数据对象</typeparam>     
+            <param name="name">轴参数名称</param>
+            <param name="eumParmasType">数据类型</param>
+            <param name="objs">构造函数的参数</param>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.setData``1(System.String,System.String,MotionLib.EumParmasType,System.Object[])">
+            <summary>
+            传递数据
+            </summary>
+            <typeparam name="T">数据对象</typeparam>
+             <param name="AxisName">轴名称</param>
+            <param name="name">轴参数名称</param>
+            <param name="eumParmasType">数据类型</param>
+            <param name="objs">构造函数的参数</param>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.getData``1(System.String)">
+            <summary>
+            通过参数名称获取控制卡使用参数，不同的轴可以有同样的参数类型,
+            T:返回类型,parmasName:参数名称或者功能名称
+            </summary>
+            <typeparam name="T">返回类型</typeparam>
+            <param name="parmasName">参数名称或者功能名称</param>
+            <returns>轴参数值</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.OR_SetCardNum(System.Object[])">
+            <summary>
+            设置控制卡号 
+            </summary>
+            <param name="objs">参数集</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.OR_ZeroPos(System.Object[])">
+            <summary>
+            轴位置清零
+            </summary>
+            <param name="objs">参数集</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.OR_GetSts(System.Int32@,System.Object[])">
+            <summary>
+            获得控制轴状态
+            </summary>
+            <param name="pSts">32位轴状态字 </param>
+            <param name="objs">参数集</param>
+            <returns>指令运行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.OR_ClrSts(System.Object[])">
+            <summary>
+            清除控制轴状态
+            </summary>
+            <param name="objs">参数集</param>
+            <returns>指令运行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.OR_GetPrfPos(System.Double@,System.Object[])">
+            <summary>
+            读取规划位置
+            </summary>
+            <param name="pSts">读取返回值</param>
+            <param name="objs">参数集</param>
+            <returns>指令运行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.OR_GetEncPos(System.Double@,System.Object[])">
+            <summary>
+            读取控制轴的编码器位置 
+            </summary>
+            <param name="pSts">读取返回值</param>
+            <param name="objs">参数集</param>
+            <returns>指令运行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.OR_GetPrfVel(System.Double@,System.Object[])">
+            <summary>
+            读取轴规划速度
+            </summary>
+            <param name="pSts">读取返回值</param>
+            <param name="objs">参数集</param>
+            <returns>指令运行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.OR_Stop(System.Object[])">
+            <summary>
+            轴停止
+            </summary>
+            <param name="objs">参数集</param>
+            <returns>指令运行状态</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.OR_AxisOn(System.Object[])">
+            <summary>
+            打开控制轴伺服使能  
+            </summary>
+            <param name="objs">参数集</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.OR_AxisOff(System.Object[])">
+            <summary>
+            关闭控制轴伺服使能 
+            </summary>
+            <param name="objs">参数集</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.OR_CrdClear(System.Object[])">
+            <summary>
+            清除插补运动坐标系缓冲区 
+            </summary>
+            <param name="objs">参数集</param>
+            <returns>指令执行标志</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.LoadParameterFile``1(System.String)">
+            <summary>
+             加载参数文件
+            </summary>
+            <typeparam name="T">参数类型</typeparam>
+            <param name="fileName">文件名称</param>
+            <returns>文件对象</returns>
+        </member>
+        <member name="M:MotionLib.MotionControlBase.SaveParameterFile(System.Object,System.String)">
+            <summary>
+            保存参数文件
+            </summary>
+            <param name="SerializeObj">被保存对象</param>
+            <param name="fileName">文件名称</param>
+        </member>
+        <member name="T:MotionLib.EumCurrentWorkingstatus">
+            <summary>
+            当前工作状态
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumCurrentWorkingstatus.Ready">
+            <summary>
+            准备好状态中
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumCurrentWorkingstatus.Running">
+            <summary>
+            运行状态中
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumCurrentWorkingstatus.Exception">
+            <summary>
+            异常状态中
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumCurrentWorkingstatus.Free">
+            <summary>
+             空闲状态中
+            </summary>
+        </member>
+        <member name="T:MotionLib.MotionData">
+            <summary>
+            运动控制运行参数,
+            卡与参数对象一一对应
+            </summary>
+        </member>
+        <member name="T:MotionLib.MotionData.CommonCardParams">
+            <summary>
+             控制卡公共参数类
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.CommonCardParams.axisDic">
+            <summary>
+            轴编号集合
+            key:自定义轴名称，value:自定义轴编号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.CommonCardParams.CardNum">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.CommonCardParams.Channel">
+            <summary>
+            通道号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.CommonCardParams.axisFuncNameList">
+            <summary>
+            获取轴功能名称集合
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.CommonCardParams.modifyAxisInfo(System.String,System.Int16)">
+            <summary>
+            修改轴编号，
+            key：自定义轴功能名称，
+            newValue：修改轴编号值
+            </summary>
+            <param name="key">自定义轴功能名称</param>
+            <param name="newValue">修改轴编号值</param>
+        </member>
+        <member name="M:MotionLib.MotionData.CommonCardParams.modifyAxisInfo(System.Int16,System.String)">
+            <summary>
+            修改轴功能名称，
+            Value：轴编号值，
+            key：修改自定义轴功能名称
+            </summary>
+            <param name="Value">轴编号值</param>
+            <param name="newKey">修改自定义轴功能名称</param>
+        </member>
+        <member name="M:MotionLib.MotionData.CommonCardParams.RemoveAxisInfo(System.String)">
+            <summary>
+            移除轴信息，
+             key：自定义轴功能名称
+            </summary>
+            <param name="key">自定义轴功能名称</param>
+        </member>
+        <member name="M:MotionLib.MotionData.CommonCardParams.ClearAllAxisInfo">
+            <summary>
+            清除所有轴信息
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.CommonCardParams.isExistCurrAxis(System.Int16)">
+            <summary>
+            是否存在当前轴
+            </summary>
+            <param name="AxisNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.MotionData.CommonCardParams.isExistCurrAxis(System.String)">
+            <summary>
+            是否存在当前轴
+            </summary>
+            <param name="AxisFunctionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.MotionData.CommonCardParams.getAxisNumThroughAxisFuncName(System.String)">
+            <summary>
+            通过轴功能名称获取对应的轴编号
+            </summary>
+            <param name="AxisFuncName">轴功能名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.MotionData.CommonCardParams.getAxisFuncNameThroughAxisNum(System.Int16)">
+            <summary>
+            通过轴编号获取对应的轴功能名称
+            </summary>
+            <param name="AxisNum"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MotionLib.MotionData.InitCardParams">
+            <summary>
+            控制卡初始化参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.InitCardParams.#ctor">
+            <summary>
+            控制卡初始化参数（基础参数）
+            </summary>        
+        </member>
+        <member name="P:MotionLib.MotionData.InitCardParams.CardNum">
+            <summary>
+            卡号
+            </summary>          
+        </member>
+        <member name="P:MotionLib.MotionData.InitCardParams.Channel">
+            <summary>
+            通道号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.InitCardParams.StartAxisNo">
+            <summary>
+            起始轴编号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.InitCardParams.UsingAxisCount">
+            <summary>
+            使用中轴数
+            </summary>
+        </member>
+        <member name="E:MotionLib.MotionData.InitCardParams.PropertyChanged">
+            <summary>
+            属性通知事件
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.InitCardParams.NotifyPropertyChanged(System.String)">
+            <summary>
+            属性通知
+            </summary>
+            <param name="propertyName">属性名称</param>
+        </member>
+        <member name="E:MotionLib.MotionData.InitCardParams.axisPropertyChangedHandler">
+            <summary>
+            轴通知句柄
+            </summary>
+        </member>
+        <member name="E:MotionLib.MotionData.InitCardParams.cardPropertyChangedHandler">
+            <summary>
+             卡通知句柄
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.InitCardParams.initAxisNum(System.Int16,System.Int16,System.String[])">
+            <summary>
+            初始化轴编号,
+            startAxisNo:起始轴编号,
+            AxisCount:轴数量,
+            functionNames:自定义功能名称集
+            </summary>
+            <param name="startAxisNo">起始轴编号</param>
+            <param name="AxisCount">轴数量</param>
+            <param name="functionNames">自定义功能名称集</param>
+        </member>
+        <member name="T:MotionLib.MotionData.CardParams">
+            <summary>
+            基础参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.CardParams.#ctor(MotionLib.MotionData.InitCardParams)">
+            <summary>
+            基础参数
+            </summary>
+            <param name="obj">参数对象</param>
+        </member>
+        <member name="P:MotionLib.MotionData.CardParams.CardNum">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.CardParams.Channel">
+            <summary>
+            通道号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.CardParams.AxisFuncName">
+            <summary>
+            轴功能名称
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.CardParams.AxisNum">
+            <summary>
+            轴编号
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.CardParams.axisPropertyChangedEvent(System.String,System.Object)">
+            <summary>
+            轴属性通知
+            </summary>
+            <param name="name">属性名称</param>
+            <param name="obj">属性对象</param>
+        </member>
+        <member name="M:MotionLib.MotionData.CardParams.cardPropertyChangedEvent(System.String,System.Object)">
+            <summary>
+            卡属性通知
+            </summary>
+            <param name="name">属性名称</param>
+            <param name="obj">属性对象</param>
+        </member>
+        <member name="T:MotionLib.MotionData.RunHomeParmas">
+            <summary>
+            回原相关参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.RunHomeParmas.#ctor(MotionLib.MotionData.InitCardParams)">
+            <summary>
+             回原相关参数
+            </summary>
+            <param name="obj">公共参数</param>
+        </member>
+        <member name="P:MotionLib.MotionData.RunHomeParmas.ACC_Time">
+            <summary>
+            加速时间
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.RunHomeParmas.DCC_Time">
+            <summary>
+            减速时间
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.RunHomeParmas.motionDirection">
+            <summary>
+            运动方向
+            </summary>
+        </member>
+        <member name="T:MotionLib.MotionData.TrapParmas">
+            <summary>
+            点位运动参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.TrapParmas.#ctor(MotionLib.MotionData.InitCardParams)">
+            <summary>
+            点位运动参数
+            </summary>
+            <param name="obj">公共参数</param>
+        </member>
+        <member name="P:MotionLib.MotionData.TrapParmas.ACC">
+             <summary>
+            加速度
+             </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.TrapParmas.DEC">
+            <summary>
+            减速度
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.TrapParmas.velStart">
+            <summary>
+            初始速度
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.TrapParmas.VelTarget">
+            <summary>
+            目标速度
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.TrapParmas.dPos_abs">
+            <summary>
+            目标位置（绝对）
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.TrapParmas.dPos_rel">
+            <summary>
+            目标位置（相对）
+            </summary>
+        </member>
+        <member name="T:MotionLib.MotionData.JogParmas">
+            <summary>
+            Jog运动参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.JogParmas.#ctor(MotionLib.MotionData.InitCardParams)">
+            <summary>
+            Jog运动参数
+            </summary>
+            <param name="obj">公共参数</param>
+        </member>
+        <member name="P:MotionLib.MotionData.JogParmas.ACC">
+             <summary>
+            加速度
+             </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.JogParmas.DEC">
+            <summary>
+            减速度
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.JogParmas.VelTarget">
+            <summary>
+            目标速度
+            </summary>
+        </member>
+        <member name="T:MotionLib.MotionData.GearParmas">
+            <summary>
+            Gear运动（电子齿轮运动）参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.GearParmas.#ctor(MotionLib.MotionData.InitCardParams)">
+            <summary>
+            Jog运动参数
+            </summary>
+            <param name="obj">公共参数</param>
+        </member>
+        <member name="P:MotionLib.MotionData.GearParmas.MasterNum">
+            <summary>
+            主轴轴号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.GearParmas.SlaveNum">
+            <summary>
+            从轴轴号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.GearParmas.GearRatio">
+            <summary>
+            齿轮比
+            </summary>
+        </member>
+        <member name="T:MotionLib.MotionData.FollowParmas">
+            <summary>
+             Follow运动（从轴跟随主轴规划）参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.FollowParmas.#ctor(MotionLib.MotionData.InitCardParams)">
+            <summary>
+            Jog运动参数
+            </summary>
+            <param name="obj">公共参数</param>
+        </member>
+        <member name="P:MotionLib.MotionData.FollowParmas.MasterNum">
+            <summary>
+            主轴轴号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.FollowParmas.SlaveNum">
+            <summary>
+            从轴轴号
+            </summary>
+        </member>
+        <member name="T:MotionLib.MotionData.Crd_LnXYParmas">
+            <summary>
+            XY直线插补参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.Crd_LnXYParmas.#ctor(MotionLib.MotionData.InitCardParams)">
+            <summary>
+            XY直线插补参数
+            </summary>
+            <param name="obj">公共参数</param>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYParmas.xAxisNum">
+            <summary>
+            X轴编号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYParmas.yAxisNum">
+            <summary>
+            Y轴编号号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYParmas.crd">
+            <summary>
+            坐标系号，取值范围[1,2]
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYParmas.destinationOfX">
+            <summary>
+            插补段X轴终点坐标值
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYParmas.destinationOfY">
+            <summary>
+            插补段Y轴终点坐标值
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYParmas.synVel">
+            <summary>
+            插补段目标合成速度
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYParmas.synAcc">
+            <summary>
+            插补段目标合成加速度
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYParmas.velEnd">
+            <summary>
+            终点速度
+            </summary>
+        </member>
+        <member name="T:MotionLib.MotionData.Crd_LnXYZParmas">
+            <summary>
+            XYZ直线插补参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.Crd_LnXYZParmas.#ctor(MotionLib.MotionData.InitCardParams)">
+            <summary>
+            XYZ直线插补参数
+            </summary>
+            <param name="obj">公共参数</param>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYZParmas.zAxisNum">
+             <summary>
+            z轴编号
+             </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYZParmas.destinationOfZ">
+            <summary>
+            插补段Z轴终点坐标值
+            </summary>
+        </member>
+        <member name="T:MotionLib.MotionData.Crd_LnXYZAParmas">
+            <summary>
+            XYZA直线插补参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.Crd_LnXYZAParmas.#ctor(MotionLib.MotionData.InitCardParams)">
+            <summary>
+            XYZA直线插补参数
+            </summary>
+            <param name="obj">公共参数</param>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYZAParmas.aAxisNum">
+            <summary>
+            a轴编号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_LnXYZAParmas.destinationOfA">
+            <summary>
+            插补段a轴终点坐标值
+            </summary>
+        </member>
+        <member name="T:MotionLib.MotionData.Crd_ArcXYRParmas">
+            <summary>
+            XYR圆弧插补参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.Crd_ArcXYRParmas.#ctor(MotionLib.MotionData.InitCardParams)">
+            <summary>
+            XYR圆弧插补参数
+            </summary>
+            <param name="obj">公共参数</param>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYRParmas.xAxisNum">
+            <summary>
+            X轴编号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYRParmas.yAxisNum">
+            <summary>
+            Y轴编号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYRParmas.crd">
+            <summary>
+            坐标系号，取值范围[1,2]
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYRParmas.destinationOfX">
+            <summary>
+            插补段X轴终点坐标值
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYRParmas.destinationOfY">
+            <summary>
+            插补段Y轴终点坐标值
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYRParmas.radium">
+            <summary>
+            圆弧半径
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYRParmas.circleDir">
+            <summary>
+            圆弧的旋转方向， 
+            0：顺时针圆弧， 
+            1：逆时针圆弧， 
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYRParmas.synVel">
+            <summary>
+            插补段目标合成速度
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYRParmas.synAcc">
+            <summary>
+            插补段目标合成加速度
+            </summary>
+        </member>
+        <member name="T:MotionLib.MotionData.Crd_ArcXYCParmas">
+            <summary>
+            XYC圆弧插补参数
+            </summary>
+        </member>
+        <member name="M:MotionLib.MotionData.Crd_ArcXYCParmas.#ctor(MotionLib.MotionData.InitCardParams)">
+            <summary>
+            XYR圆弧插补参数
+            </summary>
+            <param name="obj">公共参数</param>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYCParmas.xAxisNum">
+            <summary>
+            X轴编号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYCParmas.yAxisNum">
+            <summary>
+            Y轴编号号
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYCParmas.crd">
+            <summary>
+            坐标系号，取值范围[1,2]
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYCParmas.destinationOfX">
+            <summary>
+            插补段X轴终点坐标值
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYCParmas.destinationOfY">
+            <summary>
+            插补段Y轴终点坐标值
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYCParmas.xCenter">
+            <summary>
+            圆弧插补的圆心x方向相对于起点位置的偏移量
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYCParmas.yCenter">
+            <summary>
+            圆弧插补的圆心y方向相对于起点位置的偏移量
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYCParmas.circleDir">
+            <summary>
+            圆弧的旋转方向， 
+            0：顺时针圆弧， 
+            1：逆时针圆弧， 
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYCParmas.synVel">
+            <summary>
+            插补段目标合成速度
+            </summary>
+        </member>
+        <member name="P:MotionLib.MotionData.Crd_ArcXYCParmas.synAcc">
+            <summary>
+            插补段目标合成加速度
+            </summary>
+        </member>
+        <member name="T:MotionLib.StuExecuteStatus">
+            <summary>
+            运行状态信息
+            runStatus:枚举运行状态，StatusFlag：运行标志
+            </summary>
+        </member>
+        <member name="F:MotionLib.StuExecuteStatus.runStatus">
+            <summary>
+            枚举运行状态
+            </summary>
+        </member>
+        <member name="F:MotionLib.StuExecuteStatus.StatusFlag">
+            <summary>
+            运行标志
+            </summary>
+        </member>
+        <member name="M:MotionLib.StuExecuteStatus.resetStatus">
+            <summary>
+            状态信息复位
+            </summary>
+        </member>
+        <member name="M:MotionLib.StuExecuteStatus.ToString">
+            <summary>
+            字符信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.StuExecuteStatus.getStatusInfo">
+            <summary>
+            获取状态信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MotionLib.StuFuncCallInfo">
+            <summary>
+            指令调用信息集,
+            rtn:反馈代码,errMsg:自定义错误记录信息,runFlag:运行状态标志
+            </summary>
+        </member>
+        <member name="F:MotionLib.StuFuncCallInfo.rtn">
+            <summary>
+            反馈代码
+            </summary>
+        </member>
+        <member name="F:MotionLib.StuFuncCallInfo.errMsg">
+            <summary>
+            自定义错误记录信息
+            </summary>
+        </member>
+        <member name="F:MotionLib.StuFuncCallInfo.runFlag">
+            <summary>
+            运行状态标志
+            </summary>
+        </member>
+        <member name="M:MotionLib.StuFuncCallInfo.resetInfo">
+            <summary>
+            信息清除复位
+            </summary>
+        </member>
+        <member name="T:MotionLib.EumMotionDirection">
+            <summary>
+            轴运动方向
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumMotionDirection.Positive">
+            <summary>
+            正方向
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumMotionDirection.Negative">
+            <summary>
+            负方向
+            </summary>
+        </member>
+        <member name="T:MotionLib.EumRunStatus">
+            <summary>
+            指令运行状态
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.ExecuteSuccess">
+            <summary>
+            指令执行成功
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.ExecuteFail">
+            <summary>
+            指令执行失败
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_LoadParams_Error">
+            <summary>
+            加载参数失败
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_SaveParams_Error">
+            <summary>
+            保存参数失败
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_Home_Error">
+            <summary>
+            回原指令运行异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_InitCard_Error">
+            <summary>
+            板卡初始化异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_Trap_Error">
+            <summary>
+            点位运动异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_Jog_Error">
+            <summary>
+            Jog运动异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_Gear_Error">
+            <summary>
+            Gear运动异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_Follow_Error">
+            <summary>
+            Follow运动异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_Crd_LnXY_Error">
+            <summary>
+            Crd_LnXY运动异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_Crd_LnXYZ_Error">
+            <summary>
+            Crd_LnXY运动异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_Crd_LnXYZA_Error">
+            <summary>
+             Crd_LnXYZA运动异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_Crd_ArcXYR_Error">
+            <summary>
+             Crd_ArcXYR运动异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_Crd_ArcXYC_Error">
+            <summary>
+             Crd_ArcXYC运动异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Execute_Expand_IO_Error">
+            <summary>
+            Expand_IO异常
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.Unknown_Error">
+            <summary>
+            未知错误
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumRunStatus.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="T:MotionLib.EumParmasType">
+            <summary>
+            参数类型
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.initCardParams">
+            <summary>
+            卡初始化参数
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.runHomeParmas">
+            <summary>
+            回原参数
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.TrapParmas">
+            <summary>
+            点位运动参数
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.JogParmas">
+            <summary>
+            Jog运动参数
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.GearParmas">
+            <summary>
+            Gear运动（电子齿轮运动）参数
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.FollowParmas">
+            <summary>
+             Follow运动（从轴跟随主轴规划）参数
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.Crd_LnXYParmas">
+            <summary>
+            XY直线插补参数
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.Crd_LnXYZParmas">
+            <summary>
+            XYZ直线插补参数
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.Crd_LnXYZAParmas">
+            <summary>
+            XYZA直线插补参数
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.Crd_ArcXYRParmas">
+            <summary>
+            XYR圆弧插补参数
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumParmasType.Crd_ArcXYCParmas">
+            <summary>
+            XYC圆弧插补参数
+            </summary>
+        </member>
+        <member name="T:MotionLib.EumMotionMode">
+            <summary>
+            运动模式
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumMotionMode.Trap">
+            <summary>
+            点位运动
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumMotionMode.Gear">
+            <summary>
+            电子齿轮运动
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumMotionMode.Follow">
+            <summary>
+            从轴跟随主轴规划运动
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumMotionMode.Crd">
+            <summary>
+            插补运动
+            </summary>
+        </member>
+        <member name="F:MotionLib.EumMotionMode.Home">
+            <summary>
+            回原
+            </summary>
+        </member>
+        <member name="T:MotionLib.userDictionary`3">
+            <summary>
+            自定义字典
+            </summary>
+            <typeparam name="TName">名称</typeparam>
+            <typeparam name="Ttype">类型</typeparam>
+            <typeparam name="TValue">值</typeparam>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.#ctor">
+            <summary>
+            自定义字典
+            </summary>
+        </member>
+        <member name="P:MotionLib.userDictionary`3.Count">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:MotionLib.userDictionary`3.Names">
+            <summary>
+            自定义参数名称集合
+            </summary>
+        </member>
+        <member name="P:MotionLib.userDictionary`3.Types">
+            <summary>
+            自定义参数类型集合
+            </summary>
+        </member>
+        <member name="P:MotionLib.userDictionary`3.Values">
+            <summary>
+            自定义参数值集合
+            </summary>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.Containsname(`0)">
+            <summary>
+            是否包含名称
+            </summary>
+            <param name="name">名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.Containstype(`1)">
+            <summary>
+            是否包含类型
+            </summary>
+            <param name="type">类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.Containsvalue(`2)">
+            <summary>
+            是否包含值
+            </summary>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.Add(MotionLib.NametypeValuePair{`0,`1,`2})">
+            <summary>
+            添加名称-类型-值对
+            </summary>
+            <param name="nameKeyValuePair">名称-类型-值对</param>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.Add(`0,`1,`2)">
+            <summary>
+            添加名称-类型-值
+            </summary>
+            <param name="name">名称</param>
+            <param name="key">类型</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.Remove(`0)">
+            <summary>
+            移除对
+            </summary>
+            <param name="name">名称</param>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.Clear">
+            <summary>
+            清除字典
+            </summary>
+        </member>
+        <member name="P:MotionLib.userDictionary`3.Current">
+            <summary>
+            当前名称-类型-值对
+            </summary>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.MoveNext">
+            <summary>
+            下一个
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.Reset">
+            <summary>
+            复位
+            </summary>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            实现 IEnumerable的 IEnumerator GetEnumerator()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MotionLib.userDictionary`3.Item(System.Int32)">
+            <summary>
+            索引器，
+            _index:索引编号，
+            return：NameKeyValuePair，
+            </summary>
+            <param name="_index">索引编号</param>
+            <returns>NameKeyValuePair</returns>
+        </member>
+        <member name="P:MotionLib.userDictionary`3.Item(`0)">
+            <summary>
+            索引器
+            name：名称
+            return：TValue
+            </summary>
+            <param name="name">名称</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:MotionLib.userDictionary`3.Dispose">
+            <summary>
+            资源释放
+            </summary>
+        </member>
+        <member name="T:MotionLib.NametypeValuePair`3">
+            <summary>
+            名称-类型-值
+            </summary>
+            <typeparam name="TName">名称</typeparam>
+            <typeparam name="Ttype">类型</typeparam>
+            <typeparam name="TValue">值</typeparam>
+        </member>
+        <member name="M:MotionLib.NametypeValuePair`3.#ctor(`0,`1,`2)">
+            <summary>
+            名称-类型-值
+            </summary>
+            <param name="name">名称</param>
+            <param name="type">类型</param>
+            <param name="value">值</param>
+        </member>
+        <member name="P:MotionLib.NametypeValuePair`3.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MotionLib.NametypeValuePair`3.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:MotionLib.NametypeValuePair`3.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="M:MotionLib.NametypeValuePair`3.ToString">
+            <summary>
+            字符串
+            </summary>
+            <returns>Name+Type+Value</returns>
+        </member>
+    </members>
+</doc>
